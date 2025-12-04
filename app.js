@@ -58,9 +58,7 @@ app.use((req, res) => {
 });
 app.use(errorHandler);
 
-app.get('/api/test', (req, res) => {
-  res.json({ message: 'Hello' });
-});
+
 
 
 module.exports = app;

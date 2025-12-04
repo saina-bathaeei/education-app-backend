@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 const { default: mongoose } = require('mongoose');
-const app = require('../app');
+const app = require('./app');
 
 //* Load env
 dotenv.config();
@@ -24,4 +24,8 @@ const port = +process.env.PORT || 3000;
 const productionMode = process.env.NODE_ENV === 'production'
 app.listen(port, () => {
   console.log(`Server running in ${productionMode?"production":"development"} mode on port ${port}`);
+});
+
+app.get('/', (req, res) => {
+  res.json({ message: 'Hello' });
 });
