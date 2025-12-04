@@ -54,7 +54,7 @@ app.use("/v1/users", usersRoutes);
 //* Error Controller
 app.use((req, res) => {
   console.log("this path is not available:", req.path);
-  res.status(404).json({ message: "404 OOPS! PATH NOT ooooooooooooooooooooooooo" });
+  res.status(404).json({ message: "404 OOPS! PATH NOT FOUND" });
 });
 app.use(errorHandler);
 
