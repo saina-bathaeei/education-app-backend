@@ -25,7 +25,3 @@ const productionMode = process.env.NODE_ENV === 'production'
 app.listen(port, () => {
   console.log(`Server running in ${productionMode?"production":"development"} mode on port ${port}`);
 });
-
-app.get('/', (req, res) => {
-  res.json({ message: 'Hello' });
-});
